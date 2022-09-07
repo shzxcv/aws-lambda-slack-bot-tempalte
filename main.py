@@ -9,7 +9,6 @@ def handler(event, _):
     body = json.loads(event['body'])
     if token_validator(body['token']):
         return {
-            "statusCode": 200,
             "challenge": body['challenge']
         }
     else:
